@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flipDown").click(function(){
+                $("#panelDown").slideDown("slow");
+            });
+            $("#flipUp").click(function(){
+                $("#panelUp").slideUp("slow");
+            });
+            $("#flipToggle").click(function(){
+            $("#panelToggle").slideToggle("slow");
+  });
+        });
+    </script>
+    <style>
+        #panelDown, #flipDown {
+            padding: 5px;
+            text-align: center;
+            background-color: #017a82;
+            border: solid 1px #000000;
+            }
+
+        #panelDown {
+            padding: 50px;
+            display: none;
+            }
+        #panelUp, #flipUp {
+            padding: 5px;
+            text-align: center;
+            background-color: #810c0c;
+            border: solid 1px #c3c3c3;
+            }
+
+        #panelUp {
+            padding: 50px;
+            }
+        #panelToggle, #flipToggle {
+                padding: 5px;
+                text-align: center;
+                background-color: #21a841;
+                border: solid 1px #322929;
+                }
+
+        #panelToggle {
+                padding: 50px;
+                display: none;
+                }
+    </style>
+</head>
+<body>
+    <div id="flipDown">Click to slide down panel</div>
+    <div id="panelDown">Hello world!</div><br>
+    <div id="flipUp">Click to slide up panel</div>
+<div id="panelUp">Hello world!</div><br>
+<div id="flipToggle">Click to slide the panel down or up</div>
+<div id="panelToggle">Hello world!</div>
+</body>
+</html>
