@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fading</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button.fadeInBtn").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });
+            $("button.fadeOutBtn").click(function(){
+                $("#div4").fadeOut();
+                $("#div5").fadeOut("slow");
+                $("#div6").fadeOut(3000);
+            });
+            $("button.fadeToggleBtn").click(function(){
+                $("#div7").fadeToggle();
+                $("#div8").fadeToggle("slow");
+                $("#div9").fadeToggle(3000);
+            });
+            $("button.fadeToBtn").click(function(){
+                $("#div10").fadeTo("slow", 0.15);
+                $("#div11").fadeTo("slow", 0.4);
+                $("#div12").fadeTo("slow", 0.7);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery effects</h2>
+    <h3>Fading</h3>
+    <p>Demonstrate fadeIn() with different parameters.</p>
+
+<button class="fadeInBtn">Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:rgb(214, 20, 20);"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:rgb(20, 182, 20);"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:rgb(8, 8, 87);"></div>
+<p>Demonstrate fadeOut() with different parameters.</p>
+
+<button class="fadeOutBtn">Click to fade out boxes</button><br><br>
+
+<div id="div4" style="width:80px;height:80px;background-color:rgb(255, 255, 0);"></div><br>
+<div id="div5" style="width:80px;height:80px;background-color:rgb(0, 111, 128);"></div><br>
+<div id="div6" style="width:80px;height:80px;background-color:rgb(171, 63, 169);"></div>
+<button class="fadeToggleBtn">Click to fade in/out boxes</button><br><br>
+
+<div id="div7" style="width:80px;height:80px;background-color:rgb(28, 21, 21);"></div>
+<br>
+<div id="div8" style="width:80px;height:80px;background-color:rgb(110, 110, 110);"></div>
+<br>
+<div id="div9" style="width:80px;height:80px;background-color:rgb(234, 234, 238);"></div>
+<p>Demonstrate fadeTo() with different parameters.</p>
+
+<button class="fadeToBtn">Click to fade boxes</button><br><br>
+
+<div id="div10" style="width:80px;height:80px;background-color:rgb(118, 8, 8);"></div><br>
+<div id="div11" style="width:80px;height:80px;background-color:rgb(121, 0, 202);"></div><br>
+<div id="div12" style="width:80px;height:80px;background-color:rgb(192, 109, 0);"></div>
+</body>
+</html>
